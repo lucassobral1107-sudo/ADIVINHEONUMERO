@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* Limpa o buffer de entrada */
+
 void limpar_buffer(void){
     int c;
     while((c = getchar()) != '\n' && c != EOF);
 }
 
-/* Le um inteiro com validacao. Retorna 1 se leu, 0 se invalido */
+
 int ler_inteiro(int *valor){
     if(scanf("%i", valor) != 1){
         limpar_buffer();
@@ -57,7 +57,7 @@ void jogar(void){
 
         if(!ler_inteiro(&palpite)){
             printf("Entrada invalida! Digite um numero.\n");
-            continue; /* nao gasta tentativa */
+            continue; 
         }
 
         tentativas++;
